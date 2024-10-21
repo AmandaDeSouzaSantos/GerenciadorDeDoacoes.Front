@@ -1,0 +1,131 @@
+/* Estilos gerais */
+body {
+    font-family: "Inter", sans-serif;
+}
+
+/* Estilos dos cards */
+.card-doador, .card-ong {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 600px;
+    color: black;
+    background-size: cover;
+    background-position: center;
+    margin-top: 35px;
+    border: 3px solid #2c749ef8; /* Remover a borda padrão */
+}
+.card-doador.hover, .card-ong.hover {
+    border: 3px solid #7ED957; /* A cor desejada para o hover */
+}
+
+/* Imagens de fundo */
+.card-doador {
+    background-image: url('/public/StockCake-Community\ Service\ Effort_1726325450.png');
+}
+
+.card-ong {
+    background-image: url('/public/StockCake-United\ in\ Diversity_1726325384.png');
+}
+
+/* Estilos do conteúdo do card */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título dos cards */
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Botões */
+.btn-login {
+    background-color: #2c749ef8;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    width: 50%;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #7ED957;
+}
+
+/* Links de cadastro */
+.cadastre-se {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.cadastre-se a {
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.cadastre-se a:hover {
+    font-size: 22px;
+}
+
+/* Conteúdo do card */
+.card-conteudo {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        height: 300px;
+    }
+
+    .btn-login {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+    .cadastre-se a {  
+        font-size: 17px;
+    }
+    .cadastre-se a:hover {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        height: 250px;
+    }
+
+    .btn-login {
+        font-size: 14px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-height: 700px) {
+    .card-doador, .card-ong {
+        margin-top: 15px;
+    }
+}
