@@ -1,131 +1,92 @@
-/* Estilos gerais */
 body {
-    font-family: "Inter", sans-serif;
-}
-
-/* Estilos dos cards */
-.card-doador, .card-ong {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 600px;
-    color: black;
-    background-size: cover;
-    background-position: center;
-    margin-top: 35px;
-    border: 3px solid #2c749ef8; /* Remover a borda padrão */
-}
-.card-doador.hover, .card-ong.hover {
-    border: 3px solid #7ED957; /* A cor desejada para o hover */
-}
-
-/* Imagens de fundo */
-.card-doador {
-    background-image: url('/public/StockCake-Community\ Service\ Effort_1726325450.png');
-}
-
-.card-ong {
-    background-image: url('/public/StockCake-United\ in\ Diversity_1726325384.png');
-}
-
-/* Estilos do conteúdo do card */
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Título dos cards */
-.card-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.coluna1 {
+    background-color: #34495e;
 }
 
-/* Botões */
-.btn-login {
-    background-color: #2c749ef8;
-    border-radius: 25px;
-    padding: 10px 30px;
-    font-size: 25px;
-    font-weight: bold;
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.btnDoOng {
+    padding: 10px 15px 10px 35px;
+    background-color: transparent;
     color: white;
-    width: 50%;
+    font-weight: bold;
+    border: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-size: 25px;
+}
+
+.btnAtivo {
+    background-color: white;
+    color: #2c749ef8;
+}
+
+.icone {
+    background-color: transparent;
     border: none;
-    transition: background-color 0.3s ease;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #2c749ef8;
 }
 
-.btn-login:hover {
-    background-color: #7ED957;
+.campoEntrada {
+    height: 45px;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 2px #34495e solid;
+    background-color: transparent;
 }
 
-/* Links de cadastro */
-.cadastre-se {
-    margin-top: 10px;
-    font-size: 1rem;
+.botoes {
+    background-color: #34495e;
+    position: sticky;
+    top: 0;
 }
 
-.cadastre-se a {
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 20px;
+.logoImg{
+    margin: 0;
 }
 
-.cadastre-se a:hover {
-    font-size: 22px;
+.form-control{
+    border: 0;
+    padding-left: 40px;
+    font-weight: bold;
 }
 
-/* Conteúdo do card */
-.card-conteudo {
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 100%;
-    padding: 10px;
+.btnEntrar{
+    background-color: #34495e;
+    color: white;
 }
 
-/* Responsividade */
+.btnEntrar:hover{
+    background-color: #2c749ef8;
+    color: white;
+}
+
+.enCa{
+    color: #2c749ef8;
+}
+
 @media (max-width: 768px) {
-    .card {
-        height: 300px;
-    }
-
-    .btn-login {
-        font-size: 16px;
-        padding: 8px;
-    }
-
-    .card-title {
-        font-size: 1.5rem;
-    }
-    .cadastre-se a {  
-        font-size: 17px;
-    }
-    .cadastre-se a:hover {
-        font-size: 19px;
-    }
-}
-
-@media (max-width: 576px) {
-    .card {
-        height: 250px;
-    }
-
-    .btn-login {
-        font-size: 14px;
-    }
-
-    .card-title {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-height: 700px) {
-    .card-doador, .card-ong {
-        margin-top: 15px;
+    .botoes {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
