@@ -7,9 +7,6 @@ function Nav() {
   return (
      <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img src="/logo-removebg-preview (1).png" alt="Logo" />
-        </a>
         <button
           className="navbar-toggler"
           type="button"

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './home.css';
+import './principal.css';
 import { Link } from 'react-router-dom';
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLock2Line } from "react-icons/ri";
 
-const Home = () => {
+const Principal = () => {
     const [isOngForm, setIsOngForm] = useState(false);
 
     const toggleForm = (formType) => {
@@ -24,9 +24,9 @@ const Home = () => {
                 </div>
 
                 {/* Botões Doador/ONG */}
-                <div className="botoes col-md-2 d-flex flex-column justify-content-center align-items-end m-0 p-0">
+                <div className="botoes col-md-2 d-flex flex-row flex-md-column justify-content-center align-items-end m-0 p-0">
                     <button 
-                        className={`btnDoOng mx-0 mb-2 ${!isOngForm ? 'btnAtivo' : ''}`} 
+                        className={`btnDoOng mx-0 ${!isOngForm ? 'btnAtivo' : ''}`} 
                         onClick={() => toggleForm('doador')}>
                         Doador
                     </button>
@@ -47,46 +47,46 @@ const Home = () => {
                     {/* Formulário Doador */}
                     {!isOngForm && (
                         <form className="w-75 d-flex flex-column align-items-center">
-                            <div className="w-75 mb-3 input-container d-flex align-items-center">
+                            <div className="w-100 mb-3 input-container d-flex justify-content-center">
                                 <label htmlFor="email" className="form-label"></label>
                                 <div className="campoEntrada input-group">
                                     <span className="icone input-group-text"><MdAlternateEmail /></span>
                                     <input type="email" className="form-control" id="email" placeholder="Digite Seu Email" />
                                 </div>
                             </div>
-                            <div className="w-75 mb-3 input-container d-flex align-items-center">
+                            <div className="w-100 mb-3 input-container d-flex justify-content-center">
                                 <label htmlFor="senhaDoador" className="form-label"></label>
                                 <div className="campoEntrada input-group">
                                     <span className="icone input-group-text"><RiLock2Line /></span>
                                     <input type="password" className="form-control" id="senhaDoador" placeholder="Digite Sua Senha" />
                                 </div>
                             </div>
-                            <Link to="#" className="enCa mb-3 mt-1">Esqueci a senha</Link>
+                            <Link to="/recuperar-doador-senha" className="enCa mb-3 mt-1">Esqueci a senha</Link>
                             <button type="submit" className="btnEntrar btn w-60">Entrar como Doador</button>
-                            <p className="mt-3 text-center">Ou <Link to="#" className='enCa'>Cadastre-se</Link></p>
+                            <p className="mt-3 text-center">Ou <Link to="/cadastro-doador" className='enCa'>Cadastre-se</Link></p>
                         </form>
                     )}
 
                     {/* Formulário ONG */}
                     {isOngForm && (
                          <form className="w-75 d-flex flex-column align-items-center">
-                         <div className="w-75 mb-3 input-container d-flex align-items-center">
+                         <div className="w-100 mb-3 input-container d-flex justify-content-center">
                              <label htmlFor="cnpj" className="form-label"></label>
                              <div className="campoEntrada input-group">
                                  <span className="icone input-group-text"><MdAlternateEmail /></span>
                                  <input type="text" className="form-control" id="cnpj" placeholder="Digite Seu CNPJ" />
                              </div>
                          </div>
-                         <div className="w-75 mb-3 input-container d-flex align-items-center">
+                         <div className="w-100 mb-3 input-container d-flex justify-content-center">
                              <label htmlFor="senhaOng" className="form-label"></label>
                              <div className="campoEntrada input-group">
                                  <span className="icone input-group-text"><RiLock2Line /></span>
                                  <input type="password" className="form-control" id="senhaOng" placeholder="Digite Sua Senha" />
                              </div>
                          </div>
-                         <Link to="#" className=" enCa mb-3 mt-1">Esqueci a senha</Link>
+                         <Link to="/recuperar-ong-senha" className=" enCa mb-3 mt-1">Esqueci a senha</Link>
                          <button type="submit" className="btnEntrar btn w-60">Entrar como ONG</button>
-                         <p className="mt-3 text-center">Ou <Link to="#" className='enCa'>Cadastre-se</Link></p>
+                         <p className="mt-3 text-center">Ou <Link to="/cadastro-ong" className='enCa'>Cadastre-se</Link></p>
                      </form>
                     )}
                 </div>
@@ -95,4 +95,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Principal;

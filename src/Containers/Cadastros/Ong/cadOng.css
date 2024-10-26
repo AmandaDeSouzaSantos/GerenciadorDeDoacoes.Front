@@ -1,0 +1,27 @@
+.entradaCadastro{
+    border-radius: 35px;
+    padding-left: 15px;
+    border: 2px #2c749ef8 solid;
+  }
+  .form-cad{
+    border-radius: 35px;
+    max-width: 700px;
+    background-color: white;
+    margin-top: 15px;
+  }
+  
+  .tituloCad{
+    color: #2c749ef8 ;
+  }
+  
+  .cadBotao{
+    background-color:#34495e ;
+    border-radius: 25px;
+  }
+  
+  .cadBotao:hover{
+    background-color:#2c749ef8;
+  }
+
+  .iconelogo{}
+  

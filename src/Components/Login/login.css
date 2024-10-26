@@ -11,7 +11,7 @@ body{
   
   .login-form {
     width: 50%;
-    background-color: #c5eafff8;
+    background-color: #81bcdef8;
     padding: 40px;
     border-radius: 15px;
     display: flex;
@@ -39,7 +39,7 @@ body{
   }
   
   h3 {
-    color: #34495e;
+    color: #1e4b78;
     font-weight: 700;
     margin-bottom: 20px;
     text-align: center; 

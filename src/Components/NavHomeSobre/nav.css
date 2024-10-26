@@ -1,20 +1,8 @@
-body{
-  background-color: #c5eafff8;
-}
+
 nav {
   background-color: #2c749ef8;
   font-family: 'Alfa Slab One', cursive;
 }
-
-img{
-  background-color: transparent; /* Remover cor de fundo */
-  width: 95px; /* Tamanho da imagem */
-  height: auto;
-  margin-left: 25px; /* Ajuste para dar espaço à logo */
-  border: none; /* Remove qualquer borda possível */
-  padding: 0; /* Remove qualquer padding */
-}
-
 
 .navbar-nav {
   display: flex;
