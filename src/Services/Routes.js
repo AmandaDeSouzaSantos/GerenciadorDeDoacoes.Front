@@ -8,6 +8,7 @@ import CadDoador from '../Containers/Cadastros/Doador/cadDoador';
 import CadOng from '../Containers/Cadastros/Ong/cadOng';
 import RecSenhaOng from '../Containers/OngSenha/RecuperarSenha/recSenhaOng';
 import RecSenhaDoador from '../Containers/DoadorSenha/RecuperarSenha/recSenhaDoador';
+import OngPerfil from '../Components/Ong/Perfil/ongPerfil';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/cadastro-ong" element={<CadOng />} />
         <Route path="/recuperar-ong-senha" element={<RecSenhaOng />} />
         <Route path="/recuperar-doador-senha" element={<RecSenhaDoador />} />
+        <Route path="/ong-perfil" element={<OngPerfil />} />
       </Routes>
     </Router>
   );
