@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Principal from '../Containers/Principal/principal';
-import Sobre from '../Containers/Sobre/sobre';
 import DoadorLogin from '../Containers/Authentication/Doador/doador';
 import OngLogin from '../Containers/Authentication/Ong/ong';
 import CadDoador from '../Containers/Cadastros/Doador/cadDoador';
@@ -15,7 +14,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Principal />} />
-        <Route path="/sobre" element={<Sobre />} />
         <Route path="/login-doador" element={<DoadorLogin />} />
         <Route path="/login-ong" element={<OngLogin />} />
         <Route path="/cadastro-doador" element={<CadDoador />} />

@@ -1,0 +1,15 @@
+.ong-profile{
+    margin-top: 128px;
+    font-size: 1.3rem;
+}
+
+.ongNome{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+@media (width <= 991px) {
+    .ong-profile{
+        margin-top: 69px;
+    }
+}

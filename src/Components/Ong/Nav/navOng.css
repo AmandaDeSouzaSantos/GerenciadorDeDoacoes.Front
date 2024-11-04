@@ -1,0 +1,53 @@
+nav {
+    background-color: #34495e;
+    border: white 4px solid;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+    padding: 17px;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 25px; /* Dá espaço entre os itens do menu */
+}
+
+.nav-link {
+    font-weight: 750;
+    color: white;
+}
+
+.profile-icon {
+    position: absolute; /* Para fixar ao canto */
+    right: 20px; /* Ajuste a distância do lado direito */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Para ajustar o centro do ícone */
+    color: white; /* Cor padrão do ícone */
+}
+
+/* Aplique a cor ao ícone quando o NavLink correspondente estiver ativo */
+.nav-link.profile-icon.active {
+    color: #81Bcde; /* Cor do ícone quando ativo */
+}
+
+.offcanvas {
+    background-color: #a9e0ffb2;
+}
+
+.offcanvas-body {
+    text-align: center;
+    font-size: 25px;
+}
+
+.navbar-toggler {
+    color: transparent;
+    border: white 3px solid;
+   
+}
+
+.nav-link:hover {
+    color:#81Bcde;
+}
