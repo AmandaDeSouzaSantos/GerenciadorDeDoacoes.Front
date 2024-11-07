@@ -1,0 +1,22 @@
+.caixa-ent{
+    margin-top: 128px;
+    font-size: 1.3rem;
+}
+
+.mensagem{
+    color: white;
+    background-color: #2C749E;
+    font-weight: bold;
+}
+
+.colme{ 
+    border: 7px #81BCDE solid;
+    border-radius: 0 15px 15px 0;
+}
+
+
+@media (width <= 991px) {
+    .caixa-ent{
+        margin-top: 69px;
+    }
+}

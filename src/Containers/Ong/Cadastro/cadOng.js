@@ -3,6 +3,7 @@ import { Container, Form, Row, Col, Button } from 'react-bootstrap';
 import './cadOng.css';
 import { LuImagePlus } from "react-icons/lu";
 
+
 const FormOng= () => {
   return (
     <Container className="form-cad p-4">
@@ -72,7 +73,7 @@ const FormOng= () => {
           <Col md={6}>
             <Form.Group className="mb-3" controlId="logo">
               <div className="d-flex align-items-center">
-                <LuImagePlus className="iconelogo me-2" size={24} />
+                <LuImagePlus className="iconelogo me-2" size={24} color='#EC2A2A' />
                 <Form.Control className="entradaCadastro" type="file" />
               </div>
             </Form.Group>

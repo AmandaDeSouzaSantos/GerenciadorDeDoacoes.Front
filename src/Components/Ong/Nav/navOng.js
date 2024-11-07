@@ -38,7 +38,7 @@ function NavOng() {
                 <NavLink
                   exact
                   to="/caixa-entrada-ong"
-                  className="nav-link"
+                  className="nav-link ativo"
                   activeClassName="active-link"
                 >
                   Caixa de Entrada
@@ -47,7 +47,7 @@ function NavOng() {
               <li className="nav-item">
                 <NavLink
                   to="/ong-donatario"
-                  className="nav-link"
+                  className="nav-link ativo"
                   activeClassName="active-link"
                 >
                   Donatario
@@ -56,13 +56,13 @@ function NavOng() {
               <li className="nav-item">
                 <NavLink
                   to="/estoque"
-                  className="nav-link"
+                  className="nav-link ativo"
                   activeClassName="active-link"
                 >
                   Estoque
                 </NavLink>
               </li>
-              {/* Adicionando o NavLink para o perfil da ONG */}
+             
               <li className="nav-item">
                 <NavLink
                   to="/ong-perfil"

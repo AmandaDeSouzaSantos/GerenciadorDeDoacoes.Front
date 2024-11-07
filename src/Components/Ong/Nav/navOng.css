@@ -33,6 +33,10 @@ nav {
     color: #81Bcde; /* Cor do ícone quando ativo */
 }
 
+.nav-link.ativo.active{
+    color: #81Bcde ;
+}
+
 .offcanvas {
     background-color: #a9e0ffb2;
 }
@@ -47,6 +51,7 @@ nav {
     border: white 3px solid;
    
 }
+
 
 .nav-link:hover {
     color:#81Bcde;

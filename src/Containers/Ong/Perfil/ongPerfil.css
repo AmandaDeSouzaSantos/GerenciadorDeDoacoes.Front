@@ -1,6 +1,8 @@
 .ong-profile{
     margin-top: 128px;
     font-size: 1.3rem;
+    border: 7px #81BCDE solid;
+    border-radius: 15px;
 }
 
 .ongNome{

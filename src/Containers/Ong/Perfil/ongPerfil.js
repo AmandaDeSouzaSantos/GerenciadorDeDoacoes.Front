@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Card, ListGroup, Button, Row, Col } from 'react-bootstrap';
+import { Card, ListGroup, Button, Row, Col, Form } from 'react-bootstrap';
 import { FaEdit, FaInstagram, FaFacebook } from 'react-icons/fa';
-import NavOng from '../Nav/navOng';
-import './ongPerfil.css'
+import NavOng from '../../../Components/Ong/Nav/navOng';
+
+import './ongPerfil.css';
 
 function OngPerfil() {
     const [isEditing, setIsEditing] = useState(false);
@@ -22,54 +23,69 @@ function OngPerfil() {
 
     const handleEditClick = () => setIsEditing(!isEditing);
 
+    const handleInputChange = (e, field) => {
+        setOngDados({ ...ongDados, [field]: e.target.value });
+    };
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                setOngDados({ ...ongDados, logo: reader.result });
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
     return (
         <>
             <header>
                 <NavOng />
             </header>
-            <div className="container ong-profile">
+            <div className="container p-0 ong-profile col-md-8">
                 <Card>
                     <Card.Body>
                         <Row>
-                         
-                            <Col className="text-center mb-2 mb-md-0 d-flex align-items-center col-lg-6 col-12">
-                                {ongDados.logo && (
-                                    <img
-                                        src={ongDados.logo}
-                                        alt="Logo da ONG"
-                                        style={{ width: "90%" }}
-                                        className="img-fluid"
-                                    />
+                            <Col className="text-center mb-2 mb-md-0 d-flex align-items-center flex-column justify-content-center col-lg-6 col-12">
+                                <img
+                                    src={ongDados.logo}
+                                    alt="Logo da ONG"
+                                    style={{ width: "90%" }}
+                                    className="img-fluid"
+                                />
+                                {isEditing && (
+                                    <Form.Group className="mt-2">
+                                        <Form.Control type="file" onChange={handleImageChange} />
+                                    </Form.Group>
                                 )}
                             </Col>
-                          
+
                             <Col className="col-lg-6 col-12">
-                                <div className="d-flex justify-content-space-between">
-                                    
+                                <div className="d-flex justify-content-between align-items-center">
                                     {isEditing ? (
                                         <input
                                             type="text"
                                             className="form-control"
                                             value={ongDados.name}
-                                            onChange={(e) => setOngDados({ ...ongDados, name: e.target.value })}
+                                            onChange={(e) => handleInputChange(e, 'name')}
                                         />
                                     ) : (
-                                        <Card.Title className='ongNome'>{ongDados.name}</Card.Title>
+                                        <Card.Title className="ongNome">{ongDados.name}</Card.Title>
                                     )}
                                     <Button variant="link" onClick={handleEditClick}>
                                         <FaEdit size={20} color="#34495e" />
                                     </Button>
-                                 </div>
-                                
+                                </div>
 
                                 <ListGroup variant="flush" className="mt-2">
-                                <ListGroup.Item>
+                                    <ListGroup.Item>
                                         <strong>CNPJ:</strong> {isEditing ? (
                                             <input
                                                 type="text"
                                                 className="form-control"
                                                 value={ongDados.cnpj}
-                                                onChange={(e) => setOngDados({ ...ongDados, cnpj: e.target.value })}
+                                                onChange={(e) => handleInputChange(e, 'cnpj')}
                                             />
                                         ) : (
                                             ongDados.cnpj
@@ -81,7 +97,7 @@ function OngPerfil() {
                                                 type="text"
                                                 className="form-control"
                                                 value={ongDados.address}
-                                                onChange={(e) => setOngDados({ ...ongDados, address: e.target.value })}
+                                                onChange={(e) => handleInputChange(e, 'address')}
                                             />
                                         ) : (
                                             ongDados.address
@@ -93,7 +109,7 @@ function OngPerfil() {
                                                 type="text"
                                                 className="form-control"
                                                 value={ongDados.cep}
-                                                onChange={(e) => setOngDados({ ...ongDados, cep: e.target.value })}
+                                                onChange={(e) => handleInputChange(e, 'cep')}
                                             />
                                         ) : (
                                             ongDados.cep
@@ -105,7 +121,7 @@ function OngPerfil() {
                                                 type="text"
                                                 className="form-control"
                                                 value={ongDados.phone}
-                                                onChange={(e) => setOngDados({ ...ongDados, phone: e.target.value })}
+                                                onChange={(e) => handleInputChange(e, 'phone')}
                                             />
                                         ) : (
                                             ongDados.phone
@@ -117,7 +133,7 @@ function OngPerfil() {
                                                 type="email"
                                                 className="form-control"
                                                 value={ongDados.email}
-                                                onChange={(e) => setOngDados({ ...ongDados, email: e.target.value })}
+                                                onChange={(e) => handleInputChange(e, 'email')}
                                             />
                                         ) : (
                                             ongDados.email
@@ -139,14 +155,14 @@ function OngPerfil() {
                                                     type="text"
                                                     className="form-control mb-2"
                                                     value={ongDados.instagram}
-                                                    onChange={(e) => setOngDados({ ...ongDados, instagram: e.target.value })}
+                                                    onChange={(e) => handleInputChange(e, 'instagram')}
                                                     placeholder="Instagram"
                                                 />
                                                 <input
                                                     type="text"
                                                     className="form-control"
                                                     value={ongDados.facebook}
-                                                    onChange={(e) => setOngDados({ ...ongDados, facebook: e.target.value })}
+                                                    onChange={(e) => handleInputChange(e, 'facebook')}
                                                     placeholder="Facebook"
                                                 />
                                             </>
@@ -158,7 +174,7 @@ function OngPerfil() {
                                                 type="text"
                                                 className="form-control"
                                                 value={ongDados.website}
-                                                onChange={(e) => setOngDados({ ...ongDados, website: e.target.value })}
+                                                onChange={(e) => handleInputChange(e, 'website')}
                                             />
                                         ) : (
                                             <a href={`https://${ongDados.website}`} target="_blank" rel="noopener noreferrer">
@@ -167,6 +183,12 @@ function OngPerfil() {
                                         )}
                                     </ListGroup.Item>
                                 </ListGroup>
+
+                                {isEditing && (
+                                    <Button className="cadBotao mt-3" onClick={() => setIsEditing(false)}>
+                                        Salvar
+                                    </Button>
+                                )}
                             </Col>
                         </Row>
                     </Card.Body>

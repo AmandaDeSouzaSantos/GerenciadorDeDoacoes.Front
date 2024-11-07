@@ -31,7 +31,7 @@ body {
 
 .btnAtivo {
     background-color: white;
-    color: #2c749ef8;
+    color: #EC2A2A;
 }
 
 .icone {
@@ -45,7 +45,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    color: #2c749ef8;
+    color: #EC2A2A;
 }
 
 .campoEntrada {
@@ -74,18 +74,22 @@ body {
 }
 
 .btnEntrar{
-    background-color: #34495e;
+    background-color: #ba2828;
     color: white;
     border-radius: 25px;
 }
 
 .btnEntrar:hover{
-    background-color: #2c749ef8;
+    background-color: #EC2A2A;
     color: white;
 }
 
 .enCa{
     color: #2c749ef8;
+}
+
+.enCa:hover{
+    color: #EC2A2A;
 }
 
 @media (max-width: 767px) {
