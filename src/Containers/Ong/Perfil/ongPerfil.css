@@ -1,8 +1,13 @@
 .ong-profile{
     margin-top: 128px;
     font-size: 1.3rem;
+    border-radius: 25px;
+   
+}
+
+.cardongperfil{
+    border-radius: 25px;
     border: 7px #81BCDE solid;
-    border-radius: 15px;
 }
 
 .ongNome{

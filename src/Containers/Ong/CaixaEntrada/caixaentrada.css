@@ -1,22 +1,57 @@
-.caixa-ent{
+.caixa-ent {
     margin-top: 128px;
     font-size: 1.3rem;
+    background-color: transparent;
 }
 
-.mensagem{
+.mensagem {
     color: white;
     background-color: #2C749E;
     font-weight: bold;
+    padding: 15px 15px 15px 25px;
 }
 
-.colme{ 
+.colme {
     border: 7px #81BCDE solid;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 25px 25px 0;
+    background-color: white;
+    padding: 0;
+    
 }
 
+.pessoasMensagem {
+    max-height: 450px; /* Define uma altura máxima para a lista de mensagens */
+    overflow-y: auto; /* Habilita rolagem vertical */
+    scrollbar-color: #81BCDE transparent;
+    scrollbar-width: thin;
+    padding: 0;
+    border-radius: 25px 0 0 25px;
+   
+}
 
-@media (width <= 991px) {
-    .caixa-ent{
+.conetudoCaixa {
+    background-color: transparent;
+    border: 0;
+   
+}
+
+@media (max-width: 767px) {
+    .caixa-ent {
         margin-top: 69px;
+    }
+    .colme {
+        border-radius: 0 0 15px 15px;
+      }
+      .pessoasMensagem {
+        border-radius: 15px 15px 0 0;
+      }
+}
+
+@media (width <500px) and (height <745px) {
+    .pessoasMensagem {
+        height: 330px; /* Ajusta altura para telas menores */
+    }
+    .colme {
+      border-radius: 0;
     }
 }

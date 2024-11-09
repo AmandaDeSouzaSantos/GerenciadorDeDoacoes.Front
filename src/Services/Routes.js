@@ -7,6 +7,7 @@ import RecSenhaOng from '../Containers/Ong/RecuperarSenha/recSenhaOng';
 import RecSenhaDoador from '../Containers/Doador/RecuperarSenha/recSenhaDoador';
 import OngPerfil from '../Containers/Ong/Perfil/ongPerfil';
 import CaixaEntradaOng from '../Containers/Ong/CaixaEntrada/caixaentrada';
+import OngDonatario from '../Containers/Ong/Donatario/donatario';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/recuperar-doador-senha" element={<RecSenhaDoador />} />
         <Route path="/ong-perfil" element={<OngPerfil />} />
         <Route path="/caixa-entrada-ong" element={<CaixaEntradaOng />} />
+        <Route path="/ong-donatario" element={<OngDonatario />} />
       </Routes>
     </Router>
   );

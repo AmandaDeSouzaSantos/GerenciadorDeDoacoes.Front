@@ -44,7 +44,7 @@ function OngPerfil() {
                 <NavOng />
             </header>
             <div className="container p-0 ong-profile col-md-8">
-                <Card>
+                <Card className='cardongperfil'>
                     <Card.Body>
                         <Row>
                             <Col className="text-center mb-2 mb-md-0 d-flex align-items-center flex-column justify-content-center col-lg-6 col-12">
