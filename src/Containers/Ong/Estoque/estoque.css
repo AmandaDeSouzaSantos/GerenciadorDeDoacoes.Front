@@ -1,0 +1,16 @@
+.cadBotao{
+    background-color:#ba2828 ;
+    border-radius: 25px;
+  }
+  
+  .cadBotao:hover{
+    background-color:#EC2A2A;
+  }
+.limCanBotao{
+    background-color:#4a4949 ;
+    border-radius: 25px;
+  }
+  
+  .limCanBotao:hover{
+    background-color:#5e5d5d;
+  }
