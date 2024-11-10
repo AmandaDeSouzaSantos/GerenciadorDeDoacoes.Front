@@ -1,9 +1,9 @@
 
-.cardDonatario {
+.cardt {
     margin-top: 129px;
    
 }
-.cardDonatario, .cardDonatario1{
+.cardt, .cardt1{
     border-radius: 25px;
     border: 7px #81BCDE solid;
     
@@ -12,15 +12,34 @@
 /* Remova o estilo de foco dos campos de entrada */
 .entradaCadastro:focus {
     outline: none;
-    box-shadow: none !important;
-    border-color: transparent !important; /* Remove a borda cinza */
+    box-shadow: 0 0 5px red;
+    border-color: red;
 }
+
 
 /* Remova a borda superior azul clara do InputGroup */
 .campoEntrada .input-group-text {
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
+}
+
+.donatarioInfor{
+    border-radius: 25px;
+   
+    border: 2px #EC2A2A solid;
+}
+
+.donatario{
+    border-radius: 25px;
+   
+    border: 2px #2c749ef8 solid;
+}
+
+.pesquisaDonatario{
+    border-radius: 25px;
+    border: 2px #EC2A2A solid;
+    background-color: transparent;
 }
 
 
@@ -35,7 +54,7 @@
 }
 
 @media (max-width: 767px) {
-    .cardDonatario {
+    .card {
         margin-top: 69px;
     }
 }

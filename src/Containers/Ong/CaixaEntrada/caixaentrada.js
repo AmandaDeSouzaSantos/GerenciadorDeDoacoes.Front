@@ -61,7 +61,7 @@ function CaixaEntrada() {
                                                         backgroundColor: mensagemSelecionada === mensagem ? '#81BCDE' : '#FFFFFF',
                                                         color: mensagemSelecionada === mensagem ? '#EC2A2A' : '#000000',
                                                         cursor: 'pointer',
-                                                        padding: '10px 10px 10px 25px'
+                                                        padding: '7px 7px 7px 25px'
                                                     }}
                                                     className="text-truncate"
                                                 >
