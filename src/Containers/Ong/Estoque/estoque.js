@@ -64,7 +64,7 @@ function Doacao() {
             <header>
                 <NavOng/>
             </header>
-            <Container className="contaiTa my-4 col-md-8">
+            <Container className="contaiTa my-4 col-md-9">
                 
                 <Card className='cardt p-4 mb-4'>
                     <Row>
@@ -189,10 +189,10 @@ function Doacao() {
                         {doacoesFiltradas.length > 0 ? (
                             doacoesFiltradas.map((item) => (
                                 <Col md={6} key={item.id} className="mb-4">
-                                    <Card>
+                                    <Card className='entradaCadastro'>
                                         <Card.Body>
                                         
-                                            <Card.Text>
+                                            <Card.Text >
                                                 <strong>Nome:</strong> {item.nome || item.descricao}<br />
                                                 {item.validade && <><strong>Validade:</strong> {item.validade}<br /></>}
                                                 {item.tamanho && <><strong>Tamanho:</strong> {item.tamanho}<br /></>}

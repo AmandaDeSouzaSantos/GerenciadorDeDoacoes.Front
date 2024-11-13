@@ -41,7 +41,7 @@ function CaixaEntrada() {
             <header>
                 <NavOng />
             </header>
-            <Container className="justify-content-center col-md-8 contaiTa caixa-ent p-0">
+            <Container className="justify-content-center col-md-9 contaiTa caixa-ent p-0">
                 <Row className="justify-content-center">
                     <Col>
                         <Card className='conetudoCaixa'>

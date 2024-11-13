@@ -96,7 +96,7 @@ function Donatario() {
             <header>
                 <NavOng />
             </header>
-            <Container className="contaiTa mt-5 col-md-8">
+            <Container className="contaiTa mt-5 col-md-9">
                 <Card className="cardt p-4 mb-4">
                     <h3 className="tituloCad">Cadastro Donatario</h3>
                     <Row>

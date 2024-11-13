@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, ListGroup, Button, Row, Col, Form } from 'react-bootstrap';
 import { FaEdit, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { TbDoorExit } from "react-icons/tb";
 import NavOng from '../../../Components/Ong/Nav/navOng';
 
 import './ongPerfil.css';
@@ -43,7 +44,7 @@ function OngPerfil() {
             <header>
                 <NavOng />
             </header>
-            <div className="container p-0 ong-profile col-md-8">
+            <div className="container p-0 ong-profile col-md-9">
                 <Card className='cardongperfil'>
                     <Card.Body>
                         <Row>
@@ -181,6 +182,15 @@ function OngPerfil() {
                                                 {ongDados.website}
                                             </a>
                                         )}
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                        <Row className="justify-content-end">
+                                            <Col xs="auto">
+                                                <Button variant="link" className="d-flex align-items-center p-0">
+                                                    <TbDoorExit size={25} color="#34495e"/>
+                                                </Button>
+                                            </Col>
+                                        </Row>
                                     </ListGroup.Item>
                                 </ListGroup>
 
