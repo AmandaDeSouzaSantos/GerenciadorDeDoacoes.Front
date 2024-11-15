@@ -1,10 +1,4 @@
-/* Ajusta o layout do carrossel para exibir múltiplos itens por vez */
-.favorite-carousel .carousel-item {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  
+
   /* Telas grandes: 4 ONGs por slide */
   @media (min-width: 992px) {
     .favorite-ong-card {

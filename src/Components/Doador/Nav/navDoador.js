@@ -1,10 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { Container } from 'react-bootstrap';
 import './navDoador.css';
 
 function NavBarDoador() {
+  const location = useLocation();
+
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <Container>
@@ -45,20 +47,18 @@ function NavBarDoador() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  exact
                   to="/ongs-doador"
                   className="nav-link ativo"
                   activeClassName="active-link"
                 >
-                  Ong
+                    Ong
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
                   to="/doador-perfil"
                   className="nav-link profile-icon"
-                  activeClassName="active-link"
-                >
+                  activeClassName="active-link" >
                   <FaUserCircle size={50} />
                 </NavLink>
               </li>

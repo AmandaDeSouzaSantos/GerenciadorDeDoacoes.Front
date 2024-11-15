@@ -11,7 +11,9 @@ import OngDonatario from '../Containers/Ong/Donatario/donatario';
 import Estoque from '../Containers/Ong/Estoque/estoque';
 import CaixaEntradaDoador from '../Containers/Doador/CaixaEntrada/caixaentrada';
 import DoadorPerfil from '../Containers/Doador/Perfil/doadorperfil';
-import DoadorOngs from '../Containers/Doador/Ongs/ongs';
+import FavoritasEPesquisa from '../Containers/Doador/OngsFavPesq/ongs';
+import Doacao from '../Containers/Doador/Doacao/doacao';
+import OngPerfilDoador from '../Containers/Doador/PerfilOng/perfilOng'
 
 
 
@@ -30,7 +32,9 @@ function App() {
         <Route path="/estoque" element={<Estoque />} />
         <Route path="/caixa-entrada-doador" element={<CaixaEntradaDoador />} />
         <Route path="/doador-perfil" element={<DoadorPerfil />} />
-        <Route path="/ongs-doador" element={<DoadorOngs />} />
+        <Route path="/ongs-doador" element={<FavoritasEPesquisa />} />
+        <Route path="/ong-perfil-doador/:id" element={<OngPerfilDoador />} />
+        <Route path="/doacao/:id" element={<Doacao />} />
 
       </Routes>
     </Router>
