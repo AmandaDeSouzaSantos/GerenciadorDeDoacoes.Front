@@ -20,8 +20,8 @@
 }
 
 .pessoasMensagem {
-    max-height: 450px; /* Define uma altura máxima para a lista de mensagens */
-    overflow-y: auto; /* Habilita rolagem vertical */
+    max-height: 450px; 
+    overflow-y: auto;
     scrollbar-color: #81BCDE transparent;
     scrollbar-width: thin;
     padding: 0;
@@ -50,7 +50,7 @@
 
 @media (width <500px) and (height <745px) {
     .pessoasMensagem {
-        height: 250px; /* Ajusta altura para telas menores */
+        height: 250px; 
     }
     .colme {
       border-radius: 0;

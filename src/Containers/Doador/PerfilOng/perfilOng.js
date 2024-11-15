@@ -10,7 +10,7 @@ function PerfilOng() {
   const [ong, setOng] = useState(null);
 
   useEffect(() => {
-    // Função simulada para buscar ONG com base no ID
+ 
     const fetchOngById = async (id) => {
       const ongs = [
         { id: 1, nome: "ONG Esperança", endereco: "Rua da Paz, 123", cep: "12345-678", favorita: true, imagem: "https://via.placeholder.com/150", cnpj: "12.345.678/0001-90", instagram: "@ongesperanca", facebook: "fb.com/ongesperanca", site: "www.ongesperanca.com" },
@@ -63,7 +63,7 @@ function PerfilOng() {
               </a>
               <h4><strong>Site:</strong> <a href={`https://${ong.site}`} target="_blank" rel="noopener noreferrer">{ong.site}</a></h4>
               
-              {/* Botão de Doação */}
+             
               <Button 
                 className='cadBotao mt-2'
                 onClick={handleDoacaoClick}

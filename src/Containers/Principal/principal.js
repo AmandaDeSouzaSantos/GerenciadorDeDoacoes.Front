@@ -23,7 +23,7 @@ const Principal = () => {
                     </div>
                 </div>
 
-                {/* Botões Doador/ONG */}
+              
                 <div className="botoes col-md-2 d-flex flex-row flex-md-column justify-content-center align-items-end m-0 p-0">
                     <button 
                         className={`btnDoOng mx-0 ${!isOngForm ? 'btnAtivo' : ''}`} 
@@ -37,14 +37,14 @@ const Principal = () => {
                     </button>
                 </div>
 
-                {/* Formulários */}
+              
                 <div className="col-md-5 d-flex flex-column justify-content-center align-items-center p-3 bg-white">
                     <div className="text-center mb-4">
                         <img src="https://via.placeholder.com/80" alt="ONG Logo" className="logoImg mb-2" />
                         <h2>ONG Pipipi</h2>
                     </div>
 
-                    {/* Formulário Doador */}
+                  
                     {!isOngForm && (
                         <form className="w-75 d-flex flex-column align-items-center">
                             <div className="w-100 mb-3 input-container d-flex justify-content-center">
@@ -67,7 +67,7 @@ const Principal = () => {
                         </form>
                     )}
 
-                    {/* Formulário ONG */}
+                 
                     {isOngForm && (
                          <form className="w-75 d-flex flex-column align-items-center">
                          <div className="w-100 mb-3 input-container d-flex justify-content-center">

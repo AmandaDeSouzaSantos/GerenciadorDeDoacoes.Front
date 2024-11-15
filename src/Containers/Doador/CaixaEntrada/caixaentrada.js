@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, ListGroup, Card, Badge, Button } from 'react-bootstrap';
 import { PiTrashBold } from "react-icons/pi";
 import NavDoador from '../../../Components/Doador/Nav/navDoador';
-import './caixaentrada.css';
 
 function CaixaEntradaDoador() {
   const [doacoes, setDoacoes] = useState([]);

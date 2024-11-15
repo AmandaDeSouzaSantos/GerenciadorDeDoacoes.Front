@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { Container } from 'react-bootstrap';
-import './navDoador.css';
 
 function NavBarDoador() {
   const location = useLocation();

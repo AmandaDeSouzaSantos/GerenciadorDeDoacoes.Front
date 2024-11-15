@@ -9,15 +9,12 @@
     
 }
 
-/* Remova o estilo de foco dos campos de entrada */
 .entradaCadastro:focus {
     outline: none;
     box-shadow: 0 0 5px red;
     border-color: red;
 }
 
-
-/* Remova a borda superior azul clara do InputGroup */
 .campoEntrada .input-group-text {
     border: none !important;
     box-shadow: none !important;
@@ -54,34 +51,32 @@
     background-color: transparent;
 }
 .pesquisaDonatario .botaoVisualizar {
-    background-color: transparent; /* Remove o fundo */
-    border: none; /* Remove a borda */
-    color: black; /* Define a cor do ícone e texto */
+    background-color: transparent; 
+    border: none; 
+    color: black; 
 }
 
 .pesquisaDonatario .botaoVisualizar:focus,
 .pesquisaDonatario .botaoVisualizar:active {
-    background-color: transparent; /* Remove o fundo no estado de foco */
-    outline: none; /* Remove a borda de foco */
-    box-shadow: none; /* Remove o efeito de sombra padrão */
+    background-color: transparent; 
+    outline: none; 
+    box-shadow: none; 
 }
 
 .pesquisaDonatario .form-control:focus {
-    border-color: transparent; /* Remove a borda azul padrão no estado de foco */
-    box-shadow: none; /* Remove o efeito de sombra padrão */
+    border-color: transparent; 
+    box-shadow: none; 
 }
-
-
 
 .nomeDonatario {
     display: block;
-    white-space: nowrap;      /* Impede a quebra de linha */
-    overflow: hidden;         /* Oculta o conteúdo que ultrapassa o limite */
-    text-overflow: ellipsis;  /* Adiciona reticências quando o texto é cortado */
-    width: 100%;              /* Garante que o nome ocupe toda a largura disponível */
-    max-width: 100%;          /* Impede o nome de ultrapassar a largura do contêiner */
+    white-space: nowrap;      
+    overflow: hidden;         
+    text-overflow: ellipsis;  
+    width: 100%;              
+    max-width: 100%;         
     box-sizing: border-box;
-    font-weight: bold;   /* Inclui o padding e as bordas no cálculo da largura */
+    font-weight: bold;  
 }
 
 .limCanBotao{
@@ -101,7 +96,7 @@
 
 @media (max-width: 1025px) and (max-height: 1400px) {
     .contaiTa {
-        flex: 0 0 85% !important;  /* Define a largura como 9 colunas (75%) */
+        flex: 0 0 85% !important;  
         width: 85% !important;
     }
 }

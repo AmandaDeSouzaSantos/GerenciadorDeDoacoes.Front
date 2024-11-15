@@ -3,13 +3,12 @@ import { Card, ListGroup, Button, Row, Col, Form } from 'react-bootstrap';
 import { FaEdit, FaPhone } from 'react-icons/fa';
 import { TbDoorExit } from "react-icons/tb";
 import NavDoador from '../../../Components/Doador/Nav/navDoador';
-import './doadorperfil.css';
 
 function DoadorPerfil() {
     const [isEditing, setIsEditing] = useState(false);
 
     const [doadorDados, setDoadorDados] = useState({
-        profilePicture: "https://via.placeholder.com/150", // Placeholder image
+        profilePicture: "https://via.placeholder.com/150", 
         name: "Nome do Doador",
         address: "Endereço do Doador",
         cep: "00000-000",
@@ -53,7 +52,7 @@ function DoadorPerfil() {
                                             onChange={(e) => handleInputChange(e, 'name')}
                                         />
                                     ) : (
-                                        <Card.Title className="doadorNome">{doadorDados.name}</Card.Title>
+                                        <Card.Title className="ongNome">{doadorDados.name}</Card.Title>
                                     )}
                                     <Button variant="link" onClick={handleEditClick}>
                                         <FaEdit size={20} color="#34495e" />

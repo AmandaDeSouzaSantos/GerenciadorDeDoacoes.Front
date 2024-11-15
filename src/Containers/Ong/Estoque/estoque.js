@@ -55,7 +55,7 @@ function Doacao() {
         setEstoque((estoqueAtual) =>
             estoqueAtual.map((item) =>
                 item.id === id ? { ...item, quantidade: novaQuantidade } : item
-            ).filter((item) => item.quantidade > 0) // Remove itens com quantidade zero
+            ).filter((item) => item.quantidade > 0)
         );
     };
 

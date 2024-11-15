@@ -47,7 +47,7 @@ function CaixaEntrada() {
                         <Card className='conteudoCaixa'>
                             <Card.Body className="p-0 cardCaixa">
                                 <Row className="m-0">
-                                    {/* Coluna de Mensagens com Rolagem */}
+                                  
                                     <Col md={4} className="pessoasMensagem">
                                         <h5 className=" m-0 mensagem">Mensagens</h5>
                                         <ListGroup  className='align-text' variant="flush">

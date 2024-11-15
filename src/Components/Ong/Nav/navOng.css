@@ -12,7 +12,7 @@ nav {
 }
 
 .navbar-nav .nav-item {
-    margin: 0 25px; /* Dá espaço entre os itens do menu */
+    margin: 0 25px; 
 }
 
 .nav-link {
@@ -21,16 +21,15 @@ nav {
 }
 
 .profile-icon {
-    position: absolute; /* Para fixar ao canto */
-    right: 20px; /* Ajuste a distância do lado direito */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Para ajustar o centro do ícone */
-    color: white; /* Cor padrão do ícone */
+    position: absolute; 
+    right: 20px;
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: white; 
 }
 
-/* Aplique a cor ao ícone quando o NavLink correspondente estiver ativo */
 .nav-link.profile-icon.active {
-    color: #81Bcde; /* Cor do ícone quando ativo */
+    color: #81Bcde; 
 }
 
 .nav-link.ativo.active{

@@ -13,14 +13,14 @@ const FormOng = () => {
     endereco: '',
     instagram: '',
     facebook: '',
-    site: '', // Site continua no estado, mas será tratado como opcional
+    site: '', 
     logo: null,
     senha: '',
   });
 
   const [errors, setErrors] = useState({});
 
-  // Função para lidar com mudanças nos inputs
+  
   const handleChange = (event) => {
     const { name, value, type, files } = event.target;
     setFormData((prevData) => ({
@@ -29,38 +29,38 @@ const FormOng = () => {
     }));
   };
 
-  // Função de validação de email
+ 
   const validarEmail = (email) => {
     const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return regex.test(email);
   };
 
-  // Função para lidar com o envio do formulário
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
     const newErrors = {};
 
-    // Verificar campos obrigatórios (exceto 'logo' e 'site')
+   
     Object.keys(formData).forEach((key) => {
       if (!formData[key] && key !== 'logo' && key !== 'site') {
         newErrors[key] = 'Este campo é obrigatório';
       }
     });
 
-    // Validação específica de email
+ 
     if (formData.email && !validarEmail(formData.email)) {
       newErrors.email = 'Por favor, insira um email válido com "@" e ".com"';
     }
 
-    // Verificar se há erros
+   
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
 
-    // Se não houver erros, prosseguir com o envio (ou outra lógica necessária)
+   
     alert('Cadastro realizado com sucesso!');
-    // Limpar o formulário (opcional)
+    
     setFormData({
       cnpj: '',
       nomeONG: '',
