@@ -32,7 +32,7 @@ function App() {
         <Route path="/estoque" element={<Estoque />} />
         <Route path="/caixa-entrada-doador" element={<CaixaEntradaDoador />} />
         <Route path="/doador-perfil" element={<DoadorPerfil />} />
-        <Route path="/ongs-doador" element={<FavoritasEPesquisa />} />
+        <Route path="/ong-doador" element={<FavoritasEPesquisa />} />
         <Route path="/ong-perfil-doador/:id" element={<OngPerfilDoador />} />
         <Route path="/doacao/:id" element={<Doacao />} />
 

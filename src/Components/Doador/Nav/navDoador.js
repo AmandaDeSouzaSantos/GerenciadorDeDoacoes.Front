@@ -36,7 +36,7 @@ function NavBarDoador() {
           </div>
           <div className="offcanvas-body">
             <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
+              <li className="nav-item">
                 <NavLink
                   to="/caixa-entrada-doador"
                   className="nav-link ativo"
@@ -47,18 +47,18 @@ function NavBarDoador() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/ongs-doador"
-                  className="nav-link ativo"
-                  activeClassName="active-link"
+                  to="/ong-doador"
+                  className={`nav-link ativo ${location.pathname.includes('/ong') ? 'active-link' : ''}`}
                 >
-                    Ong
+                  Ongs
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
                   to="/doador-perfil"
                   className="nav-link profile-icon"
-                  activeClassName="active-link" >
+                  activeClassName="active-link"
+                >
                   <FaUserCircle size={50} />
                 </NavLink>
               </li>
