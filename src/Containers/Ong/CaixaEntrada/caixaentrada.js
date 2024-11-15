@@ -44,7 +44,7 @@ function CaixaEntrada() {
             <Container className="justify-content-center col-md-9 contaiTa caixa-ent p-0">
                 <Row className="justify-content-center">
                     <Col>
-                        <Card className='conetudoCaixa'>
+                        <Card className='conteudoCaixa'>
                             <Card.Body className="p-0 cardCaixa">
                                 <Row className="m-0">
                                     {/* Coluna de Mensagens com Rolagem */}
@@ -71,7 +71,7 @@ function CaixaEntrada() {
                                         </ListGroup>
                                     </Col>
 
-                                    {/* Coluna de Detalhes da Mensagem */}
+                                  
                                     <Col md={8} className="p-0 colme">
                                         {mensagemSelecionada ? (
                                             <div className="p-3">

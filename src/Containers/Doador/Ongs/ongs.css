@@ -1,0 +1,28 @@
+/* Ajusta o layout do carrossel para exibir múltiplos itens por vez */
+.favorite-carousel .carousel-item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  /* Telas grandes: 4 ONGs por slide */
+  @media (min-width: 992px) {
+    .favorite-ong-card {
+      flex: 0 0 25%; /* 25% para 4 itens por slide */
+    }
+  }
+  
+  /* Telas médias: 2 ONGs por slide */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .favorite-ong-card {
+      flex: 0 0 50%; /* 50% para 2 itens por slide */
+    }
+  }
+  
+  /* Telas pequenas: 1 ONG por slide */
+  @media (max-width: 767px) {
+    .favorite-ong-card {
+      flex: 0 0 100%; /* 100% para 1 item por slide */
+    }
+  }
+  

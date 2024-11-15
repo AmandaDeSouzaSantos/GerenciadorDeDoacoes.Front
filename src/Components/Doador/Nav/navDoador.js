@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { Container } from 'react-bootstrap';
-import './navOng.css';
+import './navDoador.css';
 
-function NavOng() {
+function NavBarDoador() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <Container>
@@ -34,10 +34,9 @@ function NavOng() {
           </div>
           <div className="offcanvas-body">
             <ul className="navbar-nav mx-auto">
-              <li className="nav-item">
+            <li className="nav-item">
                 <NavLink
-                  exact
-                  to="/caixa-entrada-ong"
+                  to="/caixa-entrada-doador"
                   className="nav-link ativo"
                   activeClassName="active-link"
                 >
@@ -46,28 +45,20 @@ function NavOng() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/ong-donatario"
+                  exact
+                  to="/ongs-doador"
                   className="nav-link ativo"
                   activeClassName="active-link"
                 >
-                  Donatario
+                  Ong
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/estoque"
-                  className="nav-link ativo"
-                  activeClassName="active-link"
-                >
-                  Estoque
-                </NavLink>
-              </li>
-             
-              <li className="nav-item">
-                <NavLink
-                  to="/ong-perfil"
+                  to="/doador-perfil"
                   className="nav-link profile-icon"
-                  activeClassName="active-link" >
+                  activeClassName="active-link"
+                >
                   <FaUserCircle size={50} />
                 </NavLink>
               </li>
@@ -79,4 +70,4 @@ function NavOng() {
   );
 }
 
-export default NavOng;
+export default NavBarDoador;
