@@ -10,16 +10,6 @@ function OngPerfil() {
     const [isEditing, setIsEditing] = useState(false);
 
     const [ongDados, setOngDados] = useState({
-        logo: "https://www.blogueirosdasaude.org.br/wp-content/uploads/2017/12/simbolo.jpg",
-        name: "Nome da ONG",
-        cnpj: "00.000.000/0001-00",
-        address: "Endereço da ONG",
-        cep: "00000-000",
-        phone: "(00) 0000-0000",
-        email: "contato@ong.com",
-        instagram: "https://www.instagram.com/ong",
-        facebook: "https://www.facebook.com/ong",
-        website: "www.ong.com"
     });
 
     const handleEditClick = () => setIsEditing(!isEditing);

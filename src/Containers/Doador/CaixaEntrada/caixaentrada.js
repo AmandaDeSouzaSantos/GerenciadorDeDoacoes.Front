@@ -4,34 +4,20 @@ import { PiTrashBold } from "react-icons/pi";
 import NavDoador from '../../../Components/Doador/Nav/navDoador';
 
 function CaixaEntradaDoador() {
-  const [doacoes, setDoacoes] = useState([]);
+  const [listaDoacoes, setListaDoacoes] = useState([]);
   const [doacaoSelecionada, setDoacaoSelecionada] = useState(null);
 
   useEffect(() => {
-    const doacoesExemplo = [
-      { nomeOng: "ONG A", assunto: "Doação de Roupas", texto: "Aroxxxxxxxxxxxxx.", data: "2024-11-10", status: "aceita" },
-      { nomeOng: "ONG B", assunto: "Doação de Alimentos", texto: "FEijaoddddddddddd", data: "2024-11-11", status: "pendente" },
-      { nomeOng: "ONG C", assunto: "Doação de Brinquedos", texto: "dffffffffffffffffffffffffffffffffff", data: "2024-11-12", status: "recusada" },
-      { nomeOng: "ONG A", assunto: "Doação de Roupas", texto: "Aroxxxxxxxxxxxxx.", data: "2024-11-10", status: "aceita" },
-      { nomeOng: "ONG B", assunto: "Doação de Alimentos", texto: "FEijaoddddddddddd", data: "2024-11-11", status: "pendente" },
-      { nomeOng: "ONG C", assunto: "Doação de Brinquedos", texto: "dffffffffffffffffffffffffffffffffff", data: "2024-11-12", status: "recusada" },
-      { nomeOng: "ONG A", assunto: "Doação de Roupas", texto: "Aroxxxxxxxxxxxxx.", data: "2024-11-10", status: "aceita" },
-      { nomeOng: "ONG B", assunto: "Doação de Alimentos", texto: "FEijaoddddddddddd", data: "2024-11-11", status: "pendente" },
-      { nomeOng: "ONG C", assunto: "Doação de Brinquedos", texto: "dffffffffffffffffffffffffffffffffff", data: "2024-11-12", status: "recusada" },
-      { nomeOng: "ONG A", assunto: "Doação de Roupas", texto: "Aroxxxxxxxxxxxxx.", data: "2024-11-10", status: "aceita" },
-      { nomeOng: "ONG B", assunto: "Doação de Alimentos", texto: "FEijaoddddddddddd", data: "2024-11-11", status: "pendente" },
-      { nomeOng: "ONG C", assunto: "Doação de Brinquedos", texto: "dffffffffffffffffffffffffffffffffff", data: "2024-11-12", status: "recusada" },
-    ];
-
-    setDoacoes(doacoesExemplo);
-    setDoacaoSelecionada(doacoesExemplo[0]);
+  
+    setListaDoacoes([]);
+    setDoacaoSelecionada(null);
   }, []);
 
-  const handleSelectDoacao = (doacao) => {
+  const selecionarDoacao = (doacao) => {
     setDoacaoSelecionada(doacao);
   };
 
-  const getColorForStatus = (status) => {
+  const corPorStatus = (status) => {
     switch (status) {
       case "aceita":
         return "#D4EDDA";
@@ -44,7 +30,7 @@ function CaixaEntradaDoador() {
     }
   };
 
-  const getMensagemStatus = (status) => {
+  const mensagemPorStatus = (status) => {
     switch (status) {
       case "aceita":
         return "Parabéns! Sua doação foi aceita. Entre em contato com a ONG para combinar a entrega.";
@@ -57,8 +43,8 @@ function CaixaEntradaDoador() {
     }
   };
 
-  const handleDeleteDoacao = (doacao) => {
-    setDoacoes(doacoes.filter(d => d !== doacao));
+  const removerDoacao = (doacao) => {
+    setListaDoacoes(listaDoacoes.filter(d => d !== doacao));
     setDoacaoSelecionada(null);
   };
 
@@ -77,14 +63,14 @@ function CaixaEntradaDoador() {
                   <Col md={4} className="pessoasMensagem">
                     <h5 className="m-0 mensagem">Doações</h5>
                     <ListGroup variant="flush">
-                      {doacoes.map((doacao, index) => (
+                      {listaDoacoes.map((doacao, index) => (
                         <ListGroup.Item
                           key={index}
                           action
-                          onClick={() => handleSelectDoacao(doacao)}
+                          onClick={() => selecionarDoacao(doacao)}
                           active={doacaoSelecionada === doacao}
                           style={{
-                            backgroundColor: doacaoSelecionada === doacao ? '#81BCDE' : getColorForStatus(doacao.status),
+                            backgroundColor: doacaoSelecionada === doacao ? '#81BCDE' : corPorStatus(doacao.status),
                             cursor: 'pointer',
                             padding: '7px 7px 7px 25px'
                           }}
@@ -96,7 +82,7 @@ function CaixaEntradaDoador() {
                     </ListGroup>
                   </Col>
 
-                  <Col md={8} className="p-0 p-3 colme" style={{ backgroundColor: doacaoSelecionada ? getColorForStatus(doacaoSelecionada.status) : "#FFFFFF" }}>
+                  <Col md={8} className="p-0 p-3 colme" style={{ backgroundColor: doacaoSelecionada ? corPorStatus(doacaoSelecionada.status) : "#FFFFFF" }}>
                     {doacaoSelecionada ? (
                       <div className="p-3">
                         <h5 className="text-center">{doacaoSelecionada.assunto}</h5>
@@ -108,11 +94,11 @@ function CaixaEntradaDoador() {
                           </Badge>
                         </div>
                         
-                        <p className="mt-3 text-center">{getMensagemStatus(doacaoSelecionada.status)}</p>
+                        <p className="mt-3 text-center">{mensagemPorStatus(doacaoSelecionada.status)}</p>
 
                         <div className="d-flex justify-content-end mt-4">
-                          <Button variant="link" className="d-flex align-items-center p-0" onClick={() => handleDeleteDoacao(doacaoSelecionada)}>
-                            <PiTrashBold  size={25} color="#34495e"/>
+                          <Button variant="link" className="d-flex align-items-center p-0" onClick={() => removerDoacao(doacaoSelecionada)}>
+                            <PiTrashBold size={25} color="#34495e" />
                           </Button>
                         </div>
                       </div>

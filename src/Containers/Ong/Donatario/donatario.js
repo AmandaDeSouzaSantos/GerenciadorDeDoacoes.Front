@@ -15,10 +15,6 @@ function Donatario() {
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
-        const dadosIniciais = [
-            { nome: 'Amanda de Souza Santos', cpf: '52238941850', endereco: 'Rua A, 123', email: 'amanda@example.com', cep: '12345-678', telefone: '11 99326 8991' },
-        ];
-        setDoadores(dadosIniciais);
     }, []);
 
     const validarEmail = (email) => /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);

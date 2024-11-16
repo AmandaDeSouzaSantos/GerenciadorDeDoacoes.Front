@@ -1,38 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, ListGroup, Card, Button } from 'react-bootstrap';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 import NavOng from '../../../Components/Ong/Nav/navOng';
 import './caixaentrada.css';
 
 function CaixaEntrada() {
-    const [mensagens, setMensagens] = useState([]);
-    const [mensagemSelecionada, setMensagemSelecionada] = useState(null);
+    const [mensagens, setMensagens] = useState([]); // Controle de mensagens
+    const [mensagemSelecionada, setMensagemSelecionada] = useState(null); // Mensagem selecionada
 
-    useEffect(() => {
-        const mensagensExemplo = [
-            { nomeDoador: "Maria Silva", assunto: "Doação de Roupas", texto: "Gostaria de doar algumas roupas de inverno.", data: "2024-11-01" },
-            { nomeDoador: "João Souza", assunto: "Alimentos para Doação", texto: "Tenho alimentos não perecíveis disponíveis.", data: "2024-11-02" },
-            { nomeDoador: "Ana Lima", assunto: "Doação de Brinquedos", texto: "Posso doar alguns brinquedos usados.", data: "2024-11-03" },
-            { nomeDoador: "Carlos Oliveira", assunto: "Doação em Dinheiro", texto: "Gostaria de contribuir financeiramente.", data: "2024-11-04" },
-            { nomeDoador: "Beatriz Rocha", assunto: "Doação de Móveis", texto: "Tenho móveis em bom estado para doar.", data: "2024-11-05" },
-            { nomeDoador: "Ricardo Santos", assunto: "Ajuda com Voluntariado", texto: "Posso ajudar como voluntário em eventos.", data: "2024-11-06" },
-            { nomeDoador: "Juliana Costa", assunto: "Doação de Produtos de Higiene", texto: "Gostaria de doar produtos de higiene.", data: "2024-11-07" },
-            { nomeDoador: "Fernando Martins", assunto: "Doação de Livros", texto: "Tenho vários livros educativos para doar.", data: "2024-11-08" },
-            { nomeDoador: "Maria Silva", assunto: "Doação de Roupas", texto: "Gostaria de doar algumas roupas de inverno.", data: "2024-11-01" },
-            { nomeDoador: "João Souza", assunto: "Alimentos para Doação", texto: "Tenho alimentos não perecíveis disponíveis.", data: "2024-11-02" },
-            { nomeDoador: "Ana Lima", assunto: "Doação de Brinquedos", texto: "Posso doar alguns brinquedos usados.", data: "2024-11-03" },
-            { nomeDoador: "Carlos Oliveira", assunto: "Doação em Dinheiro", texto: "Gostaria de contribuir financeiramente.", data: "2024-11-04" },
-            { nomeDoador: "Beatriz Rocha", assunto: "Doação de Móveis", texto: "Tenho móveis em bom estado para doar.", data: "2024-11-05" },
-            { nomeDoador: "Ricardo Santos", assunto: "Ajuda com Voluntariado", texto: "Posso ajudar como voluntário em eventos.", data: "2024-11-06" },
-            { nomeDoador: "Juliana Costa", assunto: "Doação de Produtos de Higiene", texto: "Gostaria de doar produtos de higiene.", data: "2024-11-07" },
-            { nomeDoador: "Fernando Martins", assunto: "Doação de Livros", texto: "Tenho vários livros educativos para doar.", data: "2024-11-08" },
-        ];
-        
-        setMensagens(mensagensExemplo);
-        setMensagemSelecionada(mensagensExemplo[0]);
-    }, []);
-
-    const handleSelectMensagem = (mensagem) => {
+    // Função para selecionar uma mensagem
+    const selecionarMensagem = (mensagem) => {
         setMensagemSelecionada(mensagem);
     };
 
@@ -44,24 +21,24 @@ function CaixaEntrada() {
             <Container className="justify-content-center col-md-9 contaiTa caixa-ent p-0">
                 <Row className="justify-content-center">
                     <Col>
-                        <Card className='conteudoCaixa'>
+                        <Card className="conteudoCaixa">
                             <Card.Body className="p-0 cardCaixa">
                                 <Row className="m-0">
-                                  
+                             
                                     <Col md={4} className="pessoasMensagem">
-                                        <h5 className=" m-0 mensagem">Mensagens</h5>
-                                        <ListGroup  className='align-text' variant="flush">
+                                        <h5 className="m-0 mensagem">Mensagens</h5>
+                                        <ListGroup className="align-text" variant="flush">
                                             {mensagens.map((mensagem, index) => (
                                                 <ListGroup.Item
                                                     key={index}
                                                     action
-                                                    onClick={() => handleSelectMensagem(mensagem)}
+                                                    onClick={() => selecionarMensagem(mensagem)}
                                                     active={mensagemSelecionada === mensagem}
                                                     style={{
                                                         backgroundColor: mensagemSelecionada === mensagem ? '#81BCDE' : '#FFFFFF',
                                                         color: mensagemSelecionada === mensagem ? '#EC2A2A' : '#000000',
                                                         cursor: 'pointer',
-                                                        padding: '7px 7px 7px 25px'
+                                                        padding: '7px 7px 7px 25px',
                                                     }}
                                                     className="text-truncate"
                                                 >
@@ -71,7 +48,6 @@ function CaixaEntrada() {
                                         </ListGroup>
                                     </Col>
 
-                                  
                                     <Col md={8} className="p-0 colme">
                                         {mensagemSelecionada ? (
                                             <div className="p-3">
@@ -83,12 +59,14 @@ function CaixaEntrada() {
                                                         Aceitar <FaCheckCircle />
                                                     </Button>
                                                     <Button variant="danger">
-                                                        <FaTimesCircle />
+                                                        Recusar <FaTimesCircle />
                                                     </Button>
                                                 </div>
                                             </div>
                                         ) : (
-                                            <p className="text-center text-muted mt-4">Selecione uma mensagem para visualizar os detalhes</p>
+                                            <p className="text-center text-muted mt-4">
+                                                Selecione uma mensagem para visualizar os detalhes
+                                            </p>
                                         )}
                                     </Col>
                                 </Row>

@@ -33,8 +33,8 @@ function App() {
         <Route path="/caixa-entrada-doador" element={<CaixaEntradaDoador />} />
         <Route path="/doador-perfil" element={<DoadorPerfil />} />
         <Route path="/ong-doador" element={<FavoritasEPesquisa />} />
-        <Route path="/ong-perfil-doador/:id" element={<OngPerfilDoador />} />
-        <Route path="/doacao/:id" element={<Doacao />} />
+        <Route path="/ong-perfil-doador" element={<OngPerfilDoador />} />
+        <Route path="/doacao" element={<Doacao />} />
 
       </Routes>
     </Router>
